@@ -2,23 +2,20 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
-<link href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<title>20220508</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -27,7 +24,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+img { max-width: 100%; vertical-align: middle; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
@@ -50,7 +47,7 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
+figure > table { margin: 0px !important; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -67,7 +64,7 @@ div.hr:focus { cursor: none; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -79,7 +76,6 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
@@ -89,10 +85,9 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
   .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -103,7 +98,6 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -134,9 +128,18 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -145,60 +148,10 @@ table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) {
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
@@ -466,6 +419,10 @@ ol, ul {
   margin-block-end: auto;
 }
 
+li p {
+  margin: 0px 0px;
+}
+
 li::marker {
   font-weight: 700;
   color: var(--red);
@@ -534,9 +491,9 @@ blockquote blockquote {
 }
 
 
-</style><title>20220508</title>
+</style>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='409故事集-凡戴尔的失落矿坑-01'><span>409故事集: 凡戴尔的失落矿坑 #01</span></h1><p>&nbsp;</p><h2 id='dm'><span>DM</span></h2><ul><li><span>SuikaXhq</span></li></ul><p>&nbsp;</p><h2 id='登场角色'><span>登场角色</span></h2><ul><li><p><font color=green><span>凯芙拉·斯托韦恩</span></font><span> (层层蹭蹭)</span></p><ul><li><span>2级 人类圣武士</span></li></ul></li><li><p><font color=#00dddd><span>艾尔莎</span></font><span>(熙瓜)</span></p><ul><li><span>2级 木精灵游侠</span></li></ul></li><li><p><font color=#aa88aa><span>雅克</span></font><span> (lcs)</span></p><ul><li><span>2级 半身人游荡者</span></li></ul></li><li><p><font color=#0066CC><span>小林</span></font><span> (tx)</span></p><ul><li><span>2级 人类牧师</span></li></ul></li><li><p><font color=#bb0000><span>帕瓦</span></font><span> (zy)</span></p><ul><li><span>2级 龙裔战士</span></li></ul></li><li><p><font color=#FF9900><span>Adam Doom</span></font><span> (hkh)</span></p><ul><li><span>2级 提夫林法师</span></li></ul></li><li><p><font color=#FF6666><span>Zed</span></font><span> (rlh)</span></p><ul><li><span>2级 半兽人野蛮人</span></li></ul></li></ul><p>&nbsp;</p><h1 id='ep01--地精箭头'><span>EP01 ~ 地精箭头</span></h1><p>&nbsp;</p><h2 id='无冬城甘德伦的委托'><span>无冬城：甘德伦的委托</span></h2><p><span>成功抓获克仑可之后，纳休斯为七位冒险家颁发了十会盟堂的荣誉证书：</span></p><p><img src="img/DnD_Krenko_s_Way_Certification_for_409.png" referrerpolicy="no-referrer" alt="img"></p><p><span>为了向家族证明自己的决定是正确而荣耀的，</span><font color=green><span>凯芙拉</span></font><span>邀请同伴前往深水城——他的故乡——向她的父亲介绍他们的事迹。</span></p><p><span>七位冒险家于是踏上了前往剑湾的渡船，经过20天的航行，来到了无冬城。</span></p><blockquote><p><span>船上的休整期：20天（2周）</span></p><ul><li><font color=green><span>凯芙拉</span></font><span>：工作，度过2周</span><em><span>舒适</span></em><span>生活。</span></li><li><font color=#00dddd><span>艾尔莎</span></font><span>：工作，度过2周</span><em><span>舒适</span></em><span>生活；工作中受到赏识，获得</span><font color=#cc9900><span>25gp</span></font><span>。</span></li><li><font color=#aa88aa><span>雅克</span></font><span>：为盗贼公会工作，度过2周</span><em><span>简朴</span></em><span>生活，获得</span><font color=#cc9900><span>20gp</span></font><span>；但工作中被一个无冬城的家庭发现。</span></li><li><font color=#0066CC><span>小林</span></font><span>：在渡船上进行宗教服务，度过了2周</span><em><span>舒适</span></em><span>生活；工作中帮助的人为他带来了2次</span><em><span>恩惠</span></em><span>。</span></li><li><font color=#bb0000><span>帕瓦</span></font><span>：工作，度过了1周</span><em><span>舒适</span></em><span>生活和1周的</span><em><span>贫穷</span></em><span>生活。</span></li><li><font color=#FF9900><span>Adam</span></font><span>：抄写卷轴（</span><em><span>雷鸣波</span></em><span>卷轴、</span><em><span>燃烧之手</span></em><span>卷轴），度过2周简朴的生活，共花费</span><font color=#cc9900><span>70gp</span></font><span>。</span></li><li><font color=#FF6666><span>Zed</span></font><span>：在渡船上角斗，度过2周</span><em><span>富裕</span></em><span>生活，赢得比赛获得</span><font color=#cc9900><span>200gp</span></font><span>，花费</span><font color=#cc9900><span>80gp</span></font><span>。</span></li></ul></blockquote><p><span>众人在无冬城的酒馆认识了一位叫做甘德伦·寻岩者的矮人。甘德伦听说七人是有经验的冒险家，便热情地邀请七人担任他的保镖，帮他将一批货物运送到无冬城南方的凡达林小镇上，他与那的老板约定好运费为每人</span><font color=#cc9900><span>10gp</span></font><span>，而作为在路上保护他的报酬，他也会给冒险家们每人</span><font color=#cc9900><span>10gp</span></font><span>。货物预计将在十天后筹备完毕，约定届时于无冬城的驿站见面出发。</span></p><blockquote><p><span>无冬城的休整期：10天（1周）</span></p><ul><li><font color=green><span>凯芙拉</span></font><span>：在无冬城进行宗教服务，度过1周</span><em><span>舒适</span></em><span>生活；工作中获得了2次</span><em><span>恩惠</span></em><span>。</span></li><li><font color=#00dddd><span>艾尔莎</span></font><span>：工作，度过1周</span><em><span>舒适</span></em><span>生活。</span></li><li><font color=#aa88aa><span>雅克</span></font><span>：调查关于值钱物品的信息，度过1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=#cc9900><span>20gp</span></font><span>，打听到了关于潮音洞穴中魔法物品工厂的情报。</span></li><li><font color=#0066CC><span>小林</span></font><span>：在无冬城进行宗教服务，度过了1周</span><em><span>舒适</span></em><span>生活；工作中帮助的人为他带来了2次</span><em><span>恩惠</span></em><span>。（恩惠数量已达上限）</span></li><li><font color=#bb0000><span>帕瓦</span></font><span>：在无冬城的竞技场中角斗，赢得比赛获得了</span><font color=#cc9900><span>50gp</span></font><span>；度过了1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=#cc9900><span>10gp</span></font><span>。</span></li><li><font color=#FF9900><span>Adam</span></font><span>：度过1周简朴的生活，花费</span><font color=#cc9900><span>10gp</span></font><span>。</span></li><li><font color=#FF6666><span>Zed</span></font><span>：在无冬城的竞技场中角斗，但并没有赢得比赛，度过1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=#cc9900><span>10gp</span></font><span>。</span></li></ul></blockquote><p><span>一周后，众人来到了约定见面的地点，却只看到一个力工在帮忙搬运货物。工人看到冒险家们，擦了擦头上的汗，从怀里掏出一封信，说道：“你们就是老甘叫来的冒险家们吧，老甘让我把这封信给你们。”搬完最后一箱货物，工人便与众人告了别离开了。</span></p><p><span>打开甘德伦的信，众人得知甘德伦在两天前与一个叫做修达·霍温特的战士相谈甚欢，因为他也要前往凡达林，甘德伦决定与他一同动身出发，而各位只需将货物安全运至凡达林即可。</span><font color=green><span>凯芙拉</span></font><span>气愤于修达抢了保镖的活，众人也嘀咕着少了的报酬。无论如何，众人还是坐上了货车出发前往凡达林。</span></p><p>&nbsp;</p><h2 id='郊外前往凡达林'><span>郊外：前往凡达林</span></h2><p><span>三猪小径的某处，</span><font color=green><span>凯芙拉</span></font><span>牵着货车前的两头牛，坐在驾驶位上欣赏着前方的景色。</span><font color=#00dddd><span>艾尔莎</span></font><span>和</span><font color=#aa88aa><span>雅克</span></font><span>在货车两侧的茂密草丛中潜行着跟随货车，准备应对路上可能出现的威胁。</span><font color=#0066CC><span>小林</span></font><span>、</span><font color=#FF9900><span>Adam</span></font><span>、</span><font color=#FF6666><span>Zed</span></font><span>坐在货车里聊着天，而</span><font color=#bb0000><span>帕瓦</span></font><span>则已经爬上了货车顶，俯视着周围。</span></p><p><span>七人已经一路顺风地经过了大公路，今天转至三猪小径后，已经行进了半日。来到一个转弯口时，</span><font color=green><span>凯芙拉</span></font><span>突然发现前方的路被两匹死马挡住，每匹马上都插着几只黑羽箭。她立刻拉停了货车，向</span><font color=#00dddd><span>艾尔莎</span></font><span>和</span><font color=#aa88aa><span>雅克</span></font><span>打了个手势，示意他们上前察看。</span><font color=#aa88aa><span>雅克</span></font><span>伏着身子走到死马的旁边，看到其中一匹马的马鞍上印着甘德伦的徽章，而另一匹马的马鞍则印着一个不熟悉的徽章。马的鞍囊是空的，而地上还有一个打开的空地图匣。此时，哥布林正牵着狼朝</span><font color=#00dddd><span>艾尔莎</span></font><span>和</span><font color=#663366><span>雅克</span></font><span>靠近！</span></p><blockquote><h3 id='战斗哥布林伏击'><span>战斗：哥布林伏击</span></h3><p><span>离死马30尺远的路两侧，一边两个哥布林也从草丛中现身。</span><font color=#663366><span>雅克</span></font><span>被靠近的哥布林的弯刀劈中，又遭到狼的撕咬，当即昏迷倒地。车上的四人立刻跳下了车赶往现场，</span><font color=#FF9900><span>Adam</span></font><span>使用火焰箭点燃了几处草丛，</span><font color=#bb0000><span>帕瓦</span></font><span>在车顶张开长弓狙击远处的哥布林。</span></p><p><span>经过一番混战，路边的6只哥布林和2头狼被</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=#00dddd><span>艾尔莎</span></font><span>、</span><font color=#FF9900><span>Adam</span></font><span>和</span><font color=#FF6666><span>Zed</span></font><span>击杀，而战斗中偷偷靠近抢夺车上货物的2只哥布林也被</span><font color=#bb0000><span>帕瓦</span></font><span>和</span><font color=#00dddd><span>艾尔莎</span></font><span>拦截，</span><font color=#0066CC><span>小林</span></font><span>及时救治了</span><font color=#aa88aa><span>雅克</span></font><span>。</span><font color=green><span>凯芙拉</span></font><span>将哥布林抱走的酒桶、食物捡了回来，但货车旁已经打碎了几瓶灯油和几个矿灯，铲子和镐子也散落一地。</span><font color=#00dddd><span>艾尔莎</span></font><span>从哥布林身上搜到</span><font color=#996600><span>56cp</span></font><span>。</span></p><p>&nbsp;</p><p><em><span>经验奖励：</span></em><span>每人75EXP</span></p></blockquote><p><span>战斗之后，众人在路上就地休息。</span><font color=#00dddd><span>艾尔莎</span></font><span>在北边的草丛中发现了一些小型生物的足迹，以她的经验判断，最近有约一打的哥布林在此处活动，并且在一些潮湿的地面上可以看出拖曳的痕迹。</span></p><p><span>休息之后，</span><font color=#FF9900><span>Adam</span></font><span>坐在草丛中的货车里一边翻看他的法术书一边看管货物，其余六人决定前往追踪哥布林。在跟踪哥布林踪迹的路上，</span><font color=#00dddd><span>艾尔莎</span></font><span>和</span><font color=#aa88aa><span>雅克</span></font><span>发现并解除了哥布林设置的一个套索陷阱和一个陷坑。沿西北方向前进了大约5里，六人来到一片开阔地带，足迹延伸向前方山脚的洞穴，从洞口流出一条浅浅的小溪，溪对岸生长着一片茂密的灌木丛。</span></p><blockquote><h3 id='里程碑哥布林洞穴'><span>里程碑：哥布林洞穴</span></h3><p><em><span>经验奖励：</span></em><span>每人75EXP</span></p></blockquote><p><font color=#aa88aa><span>雅克</span></font><span>悄悄涉水靠近对岸的灌木丛，摸到洞口附近，却发现此处是一个藏在灌木丛中的暗哨，两只哥布林正在灌木丛中的空地上睡觉，似乎并没有发现他。</span><font color=#aa88aa><span>雅克</span></font><span>示意</span><font color=#00dddd><span>艾尔莎</span></font><span>上来帮忙，但</span><font color=#00dddd><span>艾尔莎</span></font><span>跨过溪流时的声响惊动了哥布林。两只哥布林警觉地醒来，抓起身边的武器便冲向</span><font color=#aa88aa><span>雅克</span></font><span>。</span></p><blockquote><h3 id='战斗暗哨'><span>战斗：暗哨</span></h3><p><font color=#aa88aa><span>雅克</span></font><span>被2只哥布林用弯刀砍倒在地。</span><font color=#FF6666><span>Zed</span></font><span>掷出一支标枪，刺穿了一个哥布林。</span><font color=#00dddd><span>艾尔莎</span></font><span>和</span><font color=#bb0000><span>帕瓦</span></font><span>及时跟上，用弓解决了这两个哨兵。</span><font color=green><span>凯芙拉</span></font><span>用尽她最后的圣疗能量，为</span><font color=#aa88aa><span>雅克</span></font><span>恢复了体力。</span></p><p>&nbsp;</p><p><em><span>经验奖励：</span></em><span>除</span><font color=#FF9900><span>Adam</span></font><span>外每人20EXP</span></p></blockquote></div></div>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="409故事集-凡戴尔的失落矿坑-01" class="md-header-anchor"></a><span>409故事集: 凡戴尔的失落矿坑 #01</span></h1><p>&nbsp;</p><h2><a name="dm" class="md-header-anchor"></a><span>DM</span></h2><ul><li><span>SuikaXhq</span></li></ul><p>&nbsp;</p><h2><a name="登场角色" class="md-header-anchor"></a><span>登场角色</span></h2><ul><li><p><font color=green><span>凯芙拉·斯托韦恩</span></font><span> (层层蹭蹭)</span></p><ul><li><span>2级 人类圣武士</span></li></ul></li><li><p><font color=deepskyblue><span>艾尔莎</span></font><span> (熙瓜)</span></p><ul><li><span>2级 木精灵游侠</span></li></ul></li><li><p><font color=mediumpurple><span>雅克</span></font><span> (lcs)</span></p><ul><li><span>2级 半身人游荡者</span></li></ul></li><li><p><font color=mediumblue><span>小林</span></font><span> (tx)</span></p><ul><li><span>2级 人类牧师</span></li></ul></li><li><p><font color=red><span>帕瓦</span></font><span> (zy)</span></p><ul><li><span>2级 龙裔战士</span></li></ul></li><li><p><font color=orange><span>Adam Doom</span></font><span> (hkh)</span></p><ul><li><span>2级 提夫林法师</span></li></ul></li><li><p><font color=salmon><span>Zed</span></font><span> (rlh)</span></p><ul><li><span>2级 半兽人野蛮人</span></li></ul></li></ul><p>&nbsp;</p><h1><a name="ep01--地精箭头" class="md-header-anchor"></a><span>EP01 ~ 地精箭头</span></h1><p>&nbsp;</p><h2><a name="无冬城甘德伦的委托" class="md-header-anchor"></a><span>无冬城：甘德伦的委托</span></h2><p><span>成功抓获克仑可之后，纳休斯为七位冒险家颁发了十会盟堂的荣誉证书：</span></p><p><img src="img/DnD_Krenko_s_Way_Certification_for_409.png" referrerpolicy="no-referrer" alt="img"></p><p><span>为了向家族证明自己的决定是正确而荣耀的，</span><font color=green><span>凯芙拉</span></font><span>邀请同伴前往深水城——他的故乡——向她的父亲介绍他们的事迹。</span></p><p><span>七位冒险家于是踏上了前往剑湾的渡船，经过20天的航行，来到了无冬城。</span></p><blockquote><p><span>船上的休整期：20天（2周）</span></p><ul><li><font color=green><span>凯芙拉</span></font><span>：工作，度过2周</span><em><span>舒适</span></em><span>生活。</span></li><li><font color=deepskyblue><span>艾尔莎</span></font><span>：工作，度过2周</span><em><span>舒适</span></em><span>生活；工作中受到赏识，获得</span><font color=goldenrod><span>25gp</span></font><span>。</span></li><li><font color=mediumpurple><span>雅克</span></font><span>：为盗贼公会工作，度过2周</span><em><span>简朴</span></em><span>生活，获得</span><font color=goldenrod><span>20gp</span></font><span>；但工作中被一个无冬城的家庭发现。</span></li><li><font color=mediumblue><span>小林</span></font><span>：在渡船上进行宗教服务，度过了2周</span><em><span>舒适</span></em><span>生活；工作中帮助的人为他带来了2次</span><em><span>恩惠</span></em><span>。</span></li><li><font color=red><span>帕瓦</span></font><span>：工作，度过了1周</span><em><span>舒适</span></em><span>生活和1周的</span><em><span>贫穷</span></em><span>生活。</span></li><li><font color=orange><span>Adam</span></font><span>：抄写卷轴（</span><em><span>雷鸣波</span></em><span>卷轴、</span><em><span>燃烧之手</span></em><span>卷轴），度过2周简朴的生活，共花费</span><font color=goldenrod><span>70gp</span></font><span>。</span></li><li><font color=salmon><span>Zed</span></font><span>：在渡船上角斗，度过2周</span><em><span>富裕</span></em><span>生活，赢得比赛获得</span><font color=goldenrod><span>200gp</span></font><span>，花费</span><font color=goldenrod><span>80gp</span></font><span>。</span></li></ul></blockquote><p><span>众人在无冬城的酒馆认识了一位叫做甘德伦·寻岩者的矮人。甘德伦听说七人是有经验的冒险家，便热情地邀请七人担任他的保镖，帮他将一批货物运送到无冬城南方的凡达林小镇上，他与那的老板约定好运费为每人</span><font color=goldenrod><span>10gp</span></font><span>，而作为在路上保护他的报酬，他也会给冒险家们每人</span><font color=goldenrod><span>10gp</span></font><span>。货物预计将在十天后筹备完毕，约定届时于无冬城的驿站见面出发。</span></p><blockquote><p><span>无冬城的休整期：10天（1周）</span></p><ul><li><font color=green><span>凯芙拉</span></font><span>：在无冬城进行宗教服务，度过1周</span><em><span>舒适</span></em><span>生活；工作中获得了2次</span><em><span>恩惠</span></em><span>。</span></li><li><font color=deepskyblue><span>艾尔莎</span></font><span>：工作，度过1周</span><em><span>舒适</span></em><span>生活。</span></li><li><font color=mediumpurple><span>雅克</span></font><span>：调查关于值钱物品的信息，度过1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=goldenrod><span>20gp</span></font><span>，打听到了关于潮音洞穴中魔法物品工厂的情报。</span></li><li><font color=mediumblue><span>小林</span></font><span>：在无冬城进行宗教服务，度过了1周</span><em><span>舒适</span></em><span>生活；工作中帮助的人为他带来了2次</span><em><span>恩惠</span></em><span>。（恩惠数量已达上限）</span></li><li><font color=red><span>帕瓦</span></font><span>：在无冬城的竞技场中角斗，赢得比赛获得了</span><font color=goldenrod><span>50gp</span></font><span>；度过了1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=goldenrod><span>10gp</span></font><span>。</span></li><li><font color=orange><span>Adam</span></font><span>：度过1周简朴的生活，花费</span><font color=goldenrod><span>10gp</span></font><span>。</span></li><li><font color=salmon><span>Zed</span></font><span>：在无冬城的竞技场中角斗，但并没有赢得比赛，度过1周</span><em><span>简朴</span></em><span>生活，花费</span><font color=goldenrod><span>10gp</span></font><span>。</span></li></ul></blockquote><p><span>一周后，众人来到了约定见面的地点，却只看到一个力工在帮忙搬运货物。工人看到冒险家们，擦了擦头上的汗，从怀里掏出一封信，说道：“你们就是老甘叫来的冒险家们吧，老甘让我把这封信给你们。”搬完最后一箱货物，工人便与众人告了别离开了。</span></p><p><span>打开甘德伦的信，众人得知甘德伦在两天前与一个叫做修达·霍温特的战士相谈甚欢，因为他也要前往凡达林，甘德伦决定与他一同动身出发，而各位只需将货物安全运至凡达林即可。</span><font color=green><span>凯芙拉</span></font><span>气愤于修达抢了保镖的活，众人也嘀咕着少了的报酬。无论如何，众人还是坐上了货车出发前往凡达林。</span></p><p>&nbsp;</p><h2><a name="郊外前往凡达林" class="md-header-anchor"></a><span>郊外：前往凡达林</span></h2><p><span>三猪小径的某处，</span><font color=green><span>凯芙拉</span></font><span>牵着货车前的两头牛，坐在驾驶位上欣赏着前方的景色。</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>在货车两侧的茂密草丛中潜行着跟随货车，准备应对路上可能出现的威胁。</span><font color=mediumblue><span>小林</span></font><span>、</span><font color=orange><span>Adam</span></font><span>、</span><font color=salmon><span>Zed</span></font><span>坐在货车里聊着天，而</span><font color=red><span>帕瓦</span></font><span>则已经爬上了货车顶，俯视着周围。</span></p><p><span>七人已经一路顺风地经过了大公路，今天转至三猪小径后，已经行进了半日。来到一个转弯口时，</span><font color=green><span>凯芙拉</span></font><span>突然发现前方的路被两匹死马挡住，每匹马上都插着几只黑羽箭。她立刻拉停了货车，向</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>打了个手势，示意他们上前察看。</span><font color=mediumpurple><span>雅克</span></font><span>伏着身子走到死马的旁边，看到其中一匹马的马鞍上印着甘德伦的徽章，而另一匹马的马鞍则印着一个不熟悉的徽章。马的鞍囊是空的，而地上还有一个打开的空地图匣。此时，哥布林正牵着狼朝</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>靠近！</span></p><blockquote><h3><a name="战斗哥布林伏击" class="md-header-anchor"></a><span>战斗：哥布林伏击</span></h3><p><span>离死马30尺远的路两侧，一边两个哥布林也从草丛中现身。</span><font color=#663366><span>雅克</span></font><span>被靠近的哥布林的弯刀劈中，又遭到狼的撕咬，当即昏迷倒地。车上的四人立刻跳下了车赶往现场，</span><font color=orange><span>Adam</span></font><span>使用火焰箭点燃了几处草丛，</span><font color=red><span>帕瓦</span></font><span>在车顶张开长弓狙击远处的哥布林。</span></p><p><span>经过一番混战，路边的6只哥布林和2头狼被</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=orange><span>Adam</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>击杀，而战斗中偷偷靠近抢夺车上货物的2只哥布林也被</span><font color=red><span>帕瓦</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>拦截，</span><font color=mediumblue><span>小林</span></font><span>及时救治了</span><font color=mediumpurple><span>雅克</span></font><span>。</span><font color=green><span>凯芙拉</span></font><span>将哥布林抱走的酒桶、食物捡了回来，但货车旁已经打碎了几瓶灯油和几个矿灯，铲子和镐子也散落一地。</span><font color=deepskyblue><span>艾尔莎</span></font><span>从哥布林身上搜到</span><font color=brown><span>56cp</span></font><span>。</span></p><p>&nbsp;</p><p><em><span>经验奖励：</span></em><span>每人</span><font color=olivedrab><span>75EXP</span></font></p></blockquote><p><span>战斗之后，众人在路上就地休息。</span><font color=deepskyblue><span>艾尔莎</span></font><span>在北边的草丛中发现了一些小型生物的足迹，以她的经验判断，最近有约一打的哥布林在此处活动，并且在一些潮湿的地面上可以看出拖曳的痕迹。</span></p><p><span>休息之后，</span><font color=orange><span>Adam</span></font><span>坐在草丛中的货车里一边翻看他的法术书一边看管货物，其余六人决定前往追踪哥布林。在跟踪哥布林踪迹的路上，</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>发现并解除了哥布林设置的一个套索陷阱和一个陷坑。沿西北方向前进了大约5里，六人来到一片开阔地带，足迹延伸向前方山脚的洞穴，从洞口流出一条浅浅的小溪，溪对岸生长着一片茂密的灌木丛。</span></p><blockquote><h3><a name="里程碑哥布林洞穴" class="md-header-anchor"></a><span>里程碑：哥布林洞穴</span></h3><p><em><span>经验奖励：</span></em><span>每人</span><font color=olivedrab><span>75EXP</span></font></p></blockquote><p><font color=mediumpurple><span>雅克</span></font><span>悄悄涉水靠近对岸的灌木丛，摸到洞口附近，却发现此处是一个藏在灌木丛中的暗哨，两只哥布林正在灌木丛中的空地上睡觉，似乎并没有发现他。</span><font color=mediumpurple><span>雅克</span></font><span>示意</span><font color=deepskyblue><span>艾尔莎</span></font><span>上来帮忙，但</span><font color=deepskyblue><span>艾尔莎</span></font><span>跨过溪流时的声响惊动了哥布林。两只哥布林警觉地醒来，抓起身边的武器便冲向</span><font color=mediumpurple><span>雅克</span></font><span>。</span></p><blockquote><h3><a name="战斗暗哨" class="md-header-anchor"></a><span>战斗：暗哨</span></h3><p><font color=mediumpurple><span>雅克</span></font><span>被2只哥布林用弯刀砍倒在地。</span><font color=salmon><span>Zed</span></font><span>掷出一支标枪，刺穿了一个哥布林。</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=red><span>帕瓦</span></font><span>及时跟上，用弓解决了这两个哨兵。</span><font color=green><span>凯芙拉</span></font><span>用尽她最后的圣疗能量，为</span><font color=mediumpurple><span>雅克</span></font><span>恢复了体力。</span></p><p>&nbsp;</p><p><em><span>经验奖励：</span></em><span>除</span><font color=#FF9900><span>Adam</span></font><span>外每人</span><font color=olivedrab><span>20EXP</span></font></p></blockquote></div>
 </body>
 </html>

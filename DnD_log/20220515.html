@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>20220515</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: STLITI;
+  src: url(font/STLITI.ttf);
+}
+@font-face {
+  font-family: STKAITI;
+  src: url(font/STKAITI.ttf);
+}
+
+
+:root {
+  --head: STLITI, 'Crimson Text';
+  --body: "Alegreya", STKAITI, sans-serif;
+  --mono: 'Source Code Pro';
+  font-family: var(--body);
+  font-size: 16pt;
+
+  --offwhite: #fcf5e5;
+  --green: #e0e5c1;
+  --yellow: #c9ad6a;
+  --red: #822000;
+  --purple: #704cd9;
+}
+
+/** Background **/
+html {
+  background-image: url("img/torillic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--offwhite);
+}
+content, .typora-export-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-image: url("img/torillic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.typora-export-content {
+  top: 0;
+}
+content:after, .typora-export-content:after {
+  content: "Background: Dmitry Demidov via Pexels [#3843969]";
+  position: fixed;
+  bottom: 1cm;
+  left: 0;
+  width: 6.5cm;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: -1;
+  font-size: 8pt;
+  padding: 2mm 3mm;
+  border-radius: 0 2mm 2mm 0;
+}
+
+/** Page **/
+#write, #typora-source {
+  position: relative;
+  margin: 2rem auto;
+  width: 21cm;
+  min-height: 80vh;
+  padding: 1.5cm;
+  overflow-y: hidden;
+  box-shadow:
+    inset 0cm -0cm 0.1cm 0.05cm rgba(0, 0, 0, 0.1),
+    1cm 1cm 1cm 1cm rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  background-image: url("img/paper-texture.png");
+  background-color: var(--offwhite)!important;
+  /* Add columns */
+  column-count: 1;
+  column-gap: 0.5cm;
+  column-width: 8cm;
+}
+#typora-source {
+  font-family: var(--mono) !important;
+  column-count: 1 !important;
+  column-width: auto !important;
+}
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre {
+  width: auto;
+}
+#write > *:first-child {
+  margin-block-start: 0;
+}
+.ty-on-typewriter-mode #write {
+  column-count: 1;
+  padding-bottom: 50%;
+}
+
+/** Responsivity **/
+/* Compress for small windows */
+@media only screen and (max-width: 22cm) {
+  #write, #typora-source {
+    column-count: 1;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+}
+/* Hide background credit if there's no width */
+@media only screen and (max-width: 37cm) {
+  content:after, .typora-export-content:after {
+    left: -6.1cm
+  }
+}
+
+/** Export **/
+@media print {
+	html {
+		background-image: none;
+	}
+    content, .typora-export-content {
+      position: relative;
+      background-image: none;
+      overflow-y: visible;
+    }
+    content:after, .typora-export-content:after {
+      display: none;
+    }
+    #write, #typora-source {
+        min-height: 0;
+        padding: 0;
+        overflow-y: visible;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+/** Headings **/
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-block-end: 2pt;
+  margin-block-start: 10pt;
+  line-height: 1em;
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+/* Major headings */
+h1, h2, h3, h4 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-variant: small-caps;
+  color: var(--red);
+}
+
+/* Individual headings */
+h1 {
+  font-size: 2rem;
+  column-span: all;
+}
+
+h2 {
+  font-size: 1.6rem;
+  column-span: all;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  border-bottom: 1pt solid var(--yellow);
+  border-bottom: 1pt solid var(--yellow);
+}
+h4 a {
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+
+hr {
+  /* Common to all hr's */
+  border-top: 2pt solid transparent;
+  border-bottom: 2pt solid transparent;
+  border-left-style: solid;
+  border-left-color: var(--red);
+
+  /* Top-level hr (aka page delineator) */
+  column-span: all;
+  border-left-width: 16cm;
+  margin-top: 18pt;
+  margin-bottom: 36pt;
+}
+
+blockquote hr {
+  /* Within a blockquote (aka fancy underline) */
+  column-span: none;
+  border-left-width: 6cm;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+
+/** Body **/
+p {
+  margin-block-start: 2pt;
+  margin-block-end: 2pt;
+  break-inside: avoid;
+}
+
+strong {
+  color: var(--red);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration-color: var(--yellow);
+}
+a:visited {
+  text-decoration-color: var(--green);
+}
+a:hover {
+  color: var(--text-color);
+  text-decoration-color: var(--purple);
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+strong a {
+  color: var(--red);
+}
+
+del {
+  text-decoration-color: var(--red);
+}
+
+mark {
+  background-color: var(--green);
+}
+
+code, pre {
+  background: auto;
+  font-family: var(--mono);
+}
+
+ol, ul {
+  padding-left: 1rem;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+li p {
+  margin: 0px 0px;
+}
+
+li::marker {
+  font-weight: 700;
+  color: var(--red);
+}
+
+/** Tables **/
+table {
+  break-inside: avoid;
+}
+
+thead, th {
+  font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--green);
+}
+
+blockquote tbody tr:nth-child(odd), pre blockquote tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+  padding: 3pt 6pt;
+}
+
+/** Blocks **/
+pre, pre.md-meta-block {
+  background-color: var(--green);
+  padding: 6pt;
+}
+
+blockquote {
+  background-color: var(--green);
+  padding: 12pt;
+  border-top: 3pt solid var(--red);
+  border-bottom: 3pt solid var(--red);
+  break-inside: avoid;
+}
+
+blockquote blockquote {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/** Images **/
+
+.md-image {
+  z-index: 0;
+}
+
+.md-image:before {
+  position: absolute;
+  top: -1.5cm;
+  left: -1.5cm;
+  right: -1.5cm;
+  bottom: -0.5cm;
+  background-image: url("img/splash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  content: " ";
+  z-index: -1;
+}
+.on-focus-mode .md-image:before {
+  opacity: 0.2;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="409故事集-凡戴尔的失落矿坑-02" class="md-header-anchor"></a><span>409故事集: 凡戴尔的失落矿坑 #02</span></h1><p>&nbsp;</p><h2><a name="dm" class="md-header-anchor"></a><span>DM</span></h2><ul><li><span>SuikaXhq</span></li></ul><p>&nbsp;</p><h2><a name="登场角色" class="md-header-anchor"></a><span>登场角色</span></h2><ul><li><p><font color=green><span>凯芙拉·斯托韦恩</span></font><span> (层层蹭蹭)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 845</span></font><span>) 人类圣武士</span></li></ul></li><li><p><font color=deepskyblue><span>艾尔莎</span></font><span> (熙瓜)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 845</span></font><span>) 木精灵游侠</span></li></ul></li><li><p><font color=mediumpurple><span>雅克</span></font><span> (lcs)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 845</span></font><span>) 半身人游荡者</span></li></ul></li><li><p><font color=mediumblue><span>小林</span></font><span> (tx)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 795</span></font><span>) 人类牧师</span></li></ul></li><li><p><font color=red><span>帕瓦</span></font><span> (zy)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 845</span></font><span>) 龙裔战士</span></li></ul></li><li><p><font color=orange><span>Adam Doom</span></font><span> (hkh)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 825</span></font><span>) 提夫林法师</span></li></ul></li><li><p><font color=salmon><span>Zed</span></font><span> (rlh)</span></p><ul><li><span>2级(</span><font color=olivedrab><span>EXP: 845</span></font><span>) 半兽人野蛮人</span></li></ul></li></ul><p>&nbsp;</p><h1><a name="ep01--地精箭头" class="md-header-anchor"></a><span>EP01 ~ 地精箭头</span></h1><p><span>清理完地精的暗哨，</span><font color=mediumpurple><span>雅克</span></font><span>与</span><font color=red><span>帕瓦</span></font><span>在洞口放哨，</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=mediumblue><span>小林</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>决定进入洞穴探索。</span></p><h2><a name="克拉摩窝点" class="md-header-anchor"></a><span>克拉摩窝点</span></h2><p><img src="img/Cragmaw Hideout (Player).jpg" referrerpolicy="no-referrer" alt="Cragmaw Hideout (Player)"></p><p><span>具有黑暗视觉的</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>两人在</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=mediumblue><span>小林</span></font><span>的前面小心探进了洞穴。一人宽的走道一路向上延伸，溪流从深处缓缓倾泻而下，哗啦的水声回荡在整个洞穴里。进入洞穴后走道右前方不远处有一个通向东面斗室的台阶，斗室里传来几头狼互相撕咬的吼叫声，一股腥臭的腐肉和牲畜气味从中飘出。在洞穴略深处、溪流对岸有一个通向西面的狭窄通道，入口堆满了碎石头。</span><font color=deepskyblue><span>艾尔莎</span></font><span>偷偷观察了一下斗室的地形：三头狼被铁链拴在中央石笋旁的铁杆上，斗室的深处堆积着成山的碎石，尽头形成了一个约30尺的天然竖井，井口有一个狭窄的洞口。</span></p><blockquote><h3><a name="战斗狼窝" class="md-header-anchor"></a><span>战斗：狼窝</span></h3><p><font color=deepskyblue><span>艾尔莎</span></font><span>趁狼仍在互相撕咬打闹时迅速射出一箭，当即杀死了其中一头狼。</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>冲到剩下的两头狼面前解决了它们。</span></p><p>&nbsp;</p><p><span>经验奖励：</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>每人</span><font color=olivedrab><span>50EXP</span></font><span>；</span><font color=mediumblue><span>小林</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>每人</span><font color=olivedrab><span>25EXP</span></font></p></blockquote><p><font color=deepskyblue><span>艾尔莎</span></font><span>剥下了三张狼皮，之后爬上了斗室东面的竖井。从狭缝中她看到一个宽敞的大洞窟：中央的篝火烧得正旺，有一只尖耳的长毛怪物——熊地精——正躺在洞窟东面的床铺上睡觉，旁边躺着两头狼。床铺的北面和洞窟的南面都堆着成箱的货物，有两个哥布林正在南面的货物堆里翻找着什么。</span><font color=deepskyblue><span>艾尔莎</span></font><span>看到之后便退回了斗室中，与</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=mediumblue><span>小林</span></font><span>、</span><font color=salmon><span>Zed</span></font><span>商量，决定先从主通道突破。</span></p><p><span>四人回到了主通道。</span><font color=deepskyblue><span>艾尔莎</span></font><span>靠近西面的通道时发现主通道深处有一个吊桥离地20尺横跨在溪流上方，不过由于洞穴十分黑暗，她并没有察觉到吊桥上的哥布林哨兵。</span><font color=deepskyblue><span>艾尔莎</span></font><span>试图爬上西面通道内的平台，不料平台支撑的石柱突然断裂，重重地摔在了碎石地上。好在溪流的水声盖过了平台倒下发出的响动，</span><font color=deepskyblue><span>艾尔莎</span></font><span>爬起来继续向前。通道的尽头接在另一条横向的通道上，西侧有一个较大的房间，从通道口可以看到房间内五只哥布林正围着中间的火堆烤肉，北边放着几张床铺。</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>回到主通道，示意让同伴们过来。</span><font color=salmon><span>Zed</span></font><span>将麻绳绑在腰间，让</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=mediumblue><span>小林</span></font><span>抓住绳子慢慢走向西面通道。三人涉水时发出的噪音惊动了吊桥上的哥布林哨兵，它大骂着吹响了警哨。</span></p><blockquote><h3><a name="战斗主通道" class="md-header-anchor"></a><span>战斗：主通道</span></h3><p><font color=deepskyblue><span>艾尔莎</span></font><span>试图用长弓射击吊桥上的哥布林，但洞穴里太暗并未射中。哥布林反过来趁</span><font color=deepskyblue><span>艾尔莎</span></font><span>跑回狼窝斗室时用短弓射中了她的肩膀。</span><font color=mediumblue><span>小林</span></font><span>一同退回了斗室口，</span><font color=salmon><span>Zed</span></font><span>带着</span><font color=green><span>凯芙拉</span></font><span>奔向西边通道。</span></p></blockquote><p><font color=deepskyblue><span>艾尔莎</span></font><span>的第二箭成功杀死了哥布林哨兵。但紧接着，四人发觉深处的瀑布声变得越来越大，直到</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>看到十多尺高的巨浪从洞穴深处翻涌而来。众人连忙躲避洪水的袭击，</span><font color=green><span>凯芙拉</span></font><span>成功扑倒在西边通道的碎石上，</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumblue><span>小林</span></font><span>跳进了狼窝斗室。洪水直接撞上了</span><font color=salmon><span>Zed</span></font><span>，他试图抓住墙壁，但并没有成功，被一路冲到了洞口外。</span></p><blockquote><h3><a name="战斗主通道-续" class="md-header-anchor"></a><span>战斗：主通道 (续)</span></h3><p><span>两只哥布林闻声赶到吊桥上，</span><font color=deepskyblue><span>艾尔莎</span></font><span>一箭射死其中一只。</span><font color=salmon><span>Zed</span></font><span>回到西边通道里与</span><font color=green><span>凯芙拉</span></font><span>一同进入了西面的大房间里。火堆旁的三只哥布林发现了他们，立刻抽出腰间的弯刀。</span></p><p>&nbsp;</p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>每人</span><font color=olivedrab><span>35EXP</span></font><span>；</span><font color=mediumblue><span>小林</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>每人</span><font color=olivedrab><span>15EXP</span></font></p></blockquote><p><span>正当</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>准备战斗的时候，房间南面的高台上传来哥布林低沉粗鲁的声音：“停下！朋友们。否则这个人类就死定了！”两人望去，看到一个体形较大的哥布林正拎着一个被捆着的人类男性俘虏，俘虏看上去五十多岁，身上单薄的衣服露出好几处被哥布林殴打的伤痕。</span><font color=green><span>凯芙拉</span></font><span>举起双手，表达了顺从。这个叫伊米克的哥布林要求</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>提着它们首领克拉格的头来换人质。</span><font color=green><span>凯芙拉</span></font><span>同意了它的要求，并把</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumblue><span>小林</span></font><span>都带来让伊米克认识。四人走出房间，在北边的通道里坐下休息。</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>以她对哥布林的了解，感知到洞穴的深处还有约三只哥布林没有被发现。四人休息后经过吊桥，来到一个大洞窟：洞窟的北半面用低矮的碎石墙围成了一个大水池，中间用石墙做了一个分隔，但已经被破坏出一个缺口。洞窟最东面的瀑布哗啦作响地冲刷着大水池，水流沿着北边的缺口流向主通道。南半面有两只哥布林正靠着石笋休息，南面的石阶通向一个更大的洞窟。</span></p><p><span>解决看守此处的两只哥布林后，四人坐在瀑布边休息了一会。准备妥当后，</span><font color=green><span>凯芙拉</span></font><span>将神圣力量注入他的巨剑，使他的巨剑微微散发出光芒，带着</span><font color=salmon><span>Zed</span></font><span>冲入了南面的大洞窟，</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumblue><span>小林</span></font><span>紧跟而上。大洞窟里南面的货物堆里正蹲着三只哥布林举着短弓准备射击，西边石笋躲着的两头狼凶狠地盯着冲进来的不速之客。而此时，一只熊地精——克拉格——从石笋后的阴影中现身，朝四人大声喊道：“可怜的虫子们，克拉格要用你们的骨头剔牙！”。</span></p><blockquote><h3><a name="战斗克拉格的房间" class="md-header-anchor"></a><span>战斗：克拉格的房间</span></h3><p><span>克拉格掷出一只标枪，重重地刺穿了</span><font color=green><span>凯芙拉</span></font><span>的链甲。</span><font color=green><span>凯芙拉</span></font><span>忍着剧痛砍伤了一头狼，但被咬伤昏迷。</span><font color=salmon><span>Zed</span></font><span>在身中数箭的情况下解决了扑上来的另一头狼。</span><font color=mediumblue><span>小林</span></font><span>及时使用</span><em><span>治愈真言</span></em><span>治疗了</span><font color=green><span>凯芙拉</span></font><span>，同时躲开了克拉格挥出的钉头锤。</span><font color=deepskyblue><span>艾尔莎</span></font><span>钻进洞窟东面的货物堆里，借着掩护使用长弓射击。</span><font color=green><span>凯芙拉</span></font><span>使用至圣斩痛击了克拉格，</span><font color=deepskyblue><span>艾尔莎</span></font><span>顺势将其射杀。解决了熊地精之后，三人帮助</span><font color=salmon><span>Zed</span></font><span>杀死了包围住他的三个哥布林。</span></p><p>&nbsp;</p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>每人</span><font color=olivedrab><span>185EXP</span></font><span>；</span><font color=mediumblue><span>小林</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>每人</span><font color=olivedrab><span>90EXP</span></font></p></blockquote><p><span>四人围着篝火就地休息。</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>检查了货物堆，发现每个板条箱上都有一个蓝色狮子的盾徽，里面装着各种武器装备。</span><font color=green><span>凯芙拉</span></font><span>并没有关于这个徽记的印象，应该不属于任何她了解的贵族或是组织。她推测可能是本地的某个团体或个人使用的徽章。</span><font color=deepskyblue><span>艾尔莎</span></font><span>从货物堆里找到了克拉格的箱子，里面放着</span><font color=brown><span>600cp</span></font><span>、</span><font color=slategray><span>110sp</span></font><span>、两瓶</span><em><span>治疗药水</span></em><span>和 一个镶嵌着金珠眼睛的翡翠青蛙。</span></p><p><font color=green><span>凯芙拉</span></font><span>、</span><font color=salmon><span>Zed</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>提着克拉格的头来到伊米克的房间。伊米克轻蔑地对他们说：“很好，交上</span><font color=goldenrod><span>50gp</span></font><span>的话我就把这个人类交给你们。”</span><font color=green><span>凯芙拉</span></font><span>假装他们身上没有带钱，成功说服伊米克将赎金降至</span><font color=goldenrod><span>10gp</span></font><span>。一个伊米克的小弟把人质推到众人面前，一把抢走了</span><font color=green><span>凯芙拉</span></font><span>手中的钱袋。</span></p><p><span>与此同时，洞口的</span><font color=mediumblue><span>小林</span></font><span>、</span><font color=mediumpurple><span>雅克</span></font><span>和</span><font color=red><span>帕瓦</span></font><span>正将克拉格房间里的板条箱搬出洞口。</span></p><blockquote><h3><a name="里程碑救回修达" class="md-header-anchor"></a><span>里程碑：救回修达</span></h3><p><em><span>经验奖励</span></em><span>：每人</span><font color=olivedrab><span>275EXP</span></font></p></blockquote></div>
+</body>
+</html>

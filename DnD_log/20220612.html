@@ -1,0 +1,536 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>20220612</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v27/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: STLITI;
+  src: url(font/STLITI.ttf);
+}
+@font-face {
+  font-family: STKAITI;
+  src: url(font/STKAITI.ttf);
+}
+
+:root {
+  --head: STLITI, 'Crimson Text';
+  --body: "Alegreya", STKAITI, sans-serif;
+  --mono: 'Source Code Pro';
+  font-family: var(--body);
+  font-size: 16pt;
+
+  --offwhite: #fcf5e5;
+  --green: #e0e5c1;
+  --yellow: #c9ad6a;
+  --red: #822000;
+  --purple: #704cd9;
+}
+
+/** Background **/
+html {
+  background-image: url("img/torillic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--offwhite);
+}
+content, .typora-export-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-image: url("img/torillic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.typora-export-content {
+  top: 0;
+}
+content:after, .typora-export-content:after {
+  content: "Background: Dmitry Demidov via Pexels [#3843969]";
+  position: fixed;
+  bottom: 1cm;
+  left: 0;
+  width: 6.5cm;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: -1;
+  font-size: 8pt;
+  padding: 2mm 3mm;
+  border-radius: 0 2mm 2mm 0;
+}
+
+/** Page **/
+#write, #typora-source {
+  position: relative;
+  margin: 2rem auto;
+  width: 21cm;
+  min-height: 80vh;
+  padding: 1.5cm;
+  overflow-y: hidden;
+  box-shadow:
+    inset 0cm -0cm 0.1cm 0.05cm rgba(0, 0, 0, 0.1),
+    1cm 1cm 1cm 1cm rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  background-image: url("img/paper-texture.png");
+  background-color: var(--offwhite)!important;
+  /* Add columns */
+  column-count: 1;
+  column-gap: 0.5cm;
+  column-width: 8cm;
+}
+#typora-source {
+  font-family: var(--mono) !important;
+  column-count: 1 !important;
+  column-width: auto !important;
+}
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre {
+  width: auto;
+}
+#write > *:first-child {
+  margin-block-start: 0;
+}
+.ty-on-typewriter-mode #write {
+  column-count: 1;
+  padding-bottom: 50%;
+}
+
+/** Responsivity **/
+/* Compress for small windows */
+@media only screen and (max-width: 22cm) {
+  #write, #typora-source {
+    column-count: 1;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+}
+/* Hide background credit if there's no width */
+@media only screen and (max-width: 37cm) {
+  content:after, .typora-export-content:after {
+    left: -6.1cm
+  }
+}
+
+/** Export **/
+@media print {
+	html {
+		background-image: none;
+	}
+    content, .typora-export-content {
+      position: relative;
+      background-image: none;
+      overflow-y: visible;
+    }
+    content:after, .typora-export-content:after {
+      display: none;
+    }
+    #write, #typora-source {
+        min-height: 0;
+        padding: 0;
+        overflow-y: visible;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+/** Headings **/
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-block-end: 2pt;
+  margin-block-start: 10pt;
+  line-height: 1em;
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+/* Major headings */
+h1, h2, h3, h4 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-variant: small-caps;
+  color: var(--red);
+}
+
+/* Individual headings */
+h1 {
+  font-size: 2rem;
+  column-span: all;
+}
+
+h2 {
+  font-size: 1.6rem;
+  column-span: all;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  border-bottom: 1pt solid var(--yellow);
+  border-bottom: 1pt solid var(--yellow);
+}
+h4 a {
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+
+hr {
+  /* Common to all hr's */
+  border-top: 2pt solid transparent;
+  border-bottom: 2pt solid transparent;
+  border-left-style: solid;
+  border-left-color: var(--red);
+
+  /* Top-level hr (aka page delineator) */
+  column-span: all;
+  border-left-width: 16cm;
+  margin-top: 18pt;
+  margin-bottom: 36pt;
+}
+
+blockquote hr {
+  /* Within a blockquote (aka fancy underline) */
+  column-span: none;
+  border-left-width: 6cm;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+
+/** Body **/
+p {
+  margin-block-start: 2pt;
+  margin-block-end: 2pt;
+  break-inside: avoid;
+}
+
+strong {
+  color: var(--red);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration-color: var(--yellow);
+}
+a:visited {
+  text-decoration-color: var(--green);
+}
+a:hover {
+  color: var(--text-color);
+  text-decoration-color: var(--purple);
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+strong a {
+  color: var(--red);
+}
+
+del {
+  text-decoration-color: var(--red);
+}
+
+mark {
+  background-color: var(--green);
+}
+
+code, pre {
+  background: auto;
+  font-family: var(--mono);
+}
+
+ol, ul {
+  padding-left: 1rem;
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+li p {
+  margin: 0px 0px;
+}
+
+li::marker {
+  font-weight: 700;
+  color: var(--red);
+}
+
+/** Tables **/
+table {
+  break-inside: avoid;
+}
+
+thead, th {
+  font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--green);
+}
+
+blockquote tbody tr:nth-child(odd), pre blockquote tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+  padding: 3pt 6pt;
+}
+
+/** Blocks **/
+pre, pre.md-meta-block {
+  background-color: var(--green);
+  padding: 6pt;
+}
+
+blockquote {
+  background-color: var(--green);
+  padding: 12pt;
+  border-top: 3pt solid var(--red);
+  border-bottom: 3pt solid var(--red);
+  break-inside: avoid;
+}
+
+blockquote blockquote {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/** Images **/
+
+.md-image {
+  z-index: 0;
+}
+
+.md-image:before {
+  position: absolute;
+  top: -1.5cm;
+  left: -1.5cm;
+  right: -1.5cm;
+  bottom: -0.5cm;
+  background-image: url("img/splash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  content: " ";
+  z-index: -1;
+}
+.on-focus-mode .md-image:before {
+  opacity: 0.2;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="409故事集-凡戴尔的失落矿坑-06" class="md-header-anchor"></a><span>409故事集: 凡戴尔的失落矿坑 #06</span></h1><p>&nbsp;</p><h2><a name="dm" class="md-header-anchor"></a><span>DM</span></h2><ul><li><span>SuikaXhq</span></li></ul><p>&nbsp;</p><h2><a name="登场角色" class="md-header-anchor"></a><span>登场角色</span></h2><ul><li><p><font color=green><span>凯芙拉·斯托韦恩</span></font><span> (层层蹭蹭)</span></p><ul><li><span>4级(</span><font color=olivedrab><span>EXP: 2820 +1035</span></font><span>) 人类圣武士</span></li></ul></li><li><p><font color=deepskyblue><span>艾尔莎</span></font><span> (熙瓜) 和她的动物伙伴</span><font color=limegreen><span>噗噗</span></font></p><ul><li><span>3级(</span><font color=olivedrab><span>EXP: 2660 +1035</span></font><span> </span><font color=goldenrod><span>Lv up!</span></font><span>) 木精灵游侠</span></li></ul></li><li><p><font color=mediumpurple><span>雅克</span></font><span> (lcs)</span></p><ul><li><span>3级(</span><font color=olivedrab><span>EXP: 1880 +1490</span></font><span> </span><font color=goldenrod><span>Lv up!</span></font><span>) 半身人游荡者</span></li></ul></li><li><p><font color=mediumblue><span>小林</span></font><span> (tx)</span></p><ul><li><span>3级(</span><font color=olivedrab><span>EXP: 2120 +580</span></font><span> </span><font color=goldenrod><span>Lv up!</span></font><span>) 人类牧师</span></li></ul></li><li><p><font color=red><span>帕瓦</span></font><span> (zy)</span></p><ul><li><span>3级(</span><font color=olivedrab><span>EXP: 2610 +1035</span></font><span> </span><font color=goldenrod><span>Lv up!</span></font><span>) 龙裔战士</span></li></ul></li><li><p><font color=orange><span>Adam Doom</span></font><span> (hkh)</span></p><ul><li><span>3级(</span><font color=olivedrab><span>EXP: 2340 +580</span></font><span> </span><font color=goldenrod><span>Lv up!</span></font><span>) 提夫林法师</span></li></ul></li><li><p><font color=salmon><span>Zed</span></font><span> (rlh)</span></p><ul><li><span>4级(</span><font color=olivedrab><span>EXP: 2740 +580</span></font><span>) 半兽人野蛮人</span></li></ul></li></ul><p>&nbsp;</p><h1><a name="ep03--蜘蛛之网" class="md-header-anchor"></a><span>EP03 ~ 蜘蛛之网</span></h1><h2><a name="雷树镇" class="md-header-anchor"></a><span>雷树镇</span></h2><p><img src="img/Ruins of Thundertree (Player).jpg" referrerpolicy="no-referrer" alt="Ruins of Thundertree (Player)"></p><p><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>和</span><font color=salmon><span>Zed</span></font><span>看到了写着警告的标识牌，立刻警觉起来，在不远处搭起了一个临时的扎营处。此时，</span><font color=mediumpurple><span>雅克</span></font><span>跟随四人的足迹也抵达了雷树镇。</span><font color=salmon><span>Zed</span></font><span>决定留下为同伴们望风，而其余四人带着</span><font color=limegreen><span>噗噗</span></font><span>则整队向废墟中迈进。</span></p><p><span>四人进入了镇子最西边的废墟附近查看，</span><font color=mediumpurple><span>雅克</span></font><span>利用其猫头鹰魔宠的视野，从空中望见茂密的灌木丛中突兀地长着几株枯死的灌木。</span><font color=mediumpurple><span>雅克</span></font><span>悄悄走到这几株枯木旁，猛地将刺剑扎入树枝中。被刺的树枝却诡异地扭曲起来，缠住剑身，试图阻挡</span><font color=mediumpurple><span>雅克</span></font><span>的刺剑，然而当刺剑扎到深处时，缠住刺剑的枯枝松开停了下来，毫无生机地瘫到了地上。</span></p><blockquote><h3><a name="战斗枯枝怪" class="md-header-anchor"></a><span>战斗：枯枝怪</span></h3><p><font color=mediumpurple><span>雅克</span></font><span>的刺剑惊动了附近模样类似的枯灌木，它们将枯枝慢慢扭结在一起，从地上爬起，形成了一个人类模样的枯枝怪物。东边废墟间藏着的枯枝怪们朝着冒险者们慢慢挪近。</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>和</span><font color=limegreen><span>噗噗</span></font><span>数下便解决了它们，</span><font color=mediumpurple><span>雅克</span></font><span>也靠树木的掩护消灭了两只。</span></p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>每人</span><font color=olivedrab><span>50EXP</span></font><span>，</span><font color=mediumpurple><span>雅克</span></font><font color=olivedrab><span>100EXP</span></font></p></blockquote><p><font color=deepskyblue><span>艾尔莎</span></font><span>发现废墟间，一棵大树根部附近有一片松软鼓起的土，便让</span><font color=limegreen><span>噗噗</span></font><span>过来刨土。</span><font color=limegreen><span>噗噗</span></font><span>用熊掌挖了不一会，发现了一个沉重的木箱子，里面装着</span><font color=brown><span>700cp</span></font><span>、</span><font color=slategray><span>160sp</span></font><span>、</span><font color=goldenrod><span>90gp</span></font><span>。清理完战场后，众人看到北边有一座较为完好的建筑，门旁斜靠着一块已经部分风化了的招牌，上面褪色的图案画着一匹拿着一杯麦酒的棕马。</span><font color=mediumpurple><span>雅克</span></font><span>又借用猫头鹰魔宠的视觉，向被木板零乱钉着的窗户里面望去：里面是一个典型的酒吧陈设，大桌子和椅子都被腐蚀得只剩残骸，而地上躺着2具一动不动的尸体，覆盖着厚厚一层火山灰。</span><font color=mediumpurple><span>雅克</span></font><span>摸了摸门，发现并未上锁，但是由于门框变形不能打开。</span><font color=green><span>凯芙拉</span></font><span>用力踢开了门，以一个圣骑士的敏锐嗅觉，发现地上的尸体实际上是残留着不死气息的僵尸。</span></p><blockquote><h3><a name="战斗棕马酒吧" class="md-header-anchor"></a><span>战斗：棕马酒吧</span></h3><p><font color=green><span>凯芙拉</span></font><span>冲进酒吧，用斧枪刺进了地上一只僵尸的腹部，一股火山灰顿时喷射而出，弥漫在整个房间内。</span><font color=deepskyblue><span>艾尔莎</span></font><span>在呛人的灰尘中艰难地瞄准，</span><font color=limegreen><span>噗噗</span></font><span>与</span><font color=red><span>帕瓦</span></font><span>、</span><font color=mediumpurple><span>雅克</span></font><span>也冲进房间痛击僵尸。解决眼前的两只僵尸后，</span><font color=green><span>凯芙拉</span></font><span>想去查看另一扇房门，但两只僵尸恰巧此时撞开了门，想用皮肉残缺的手去抓</span><font color=green><span>凯芙拉</span></font><span>，但扑了个空。众人迅速地消灭了这两个僵尸。</span></p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>每人</span><font color=olivedrab><span>50EXP</span></font><span>，</span><font color=mediumpurple><span>雅克</span></font><font color=olivedrab><span>100EXP</span></font></p></blockquote><p><span>西边的房间里放着几个大酒桶，空气中弥漫着一股酵母香气。</span><font color=mediumpurple><span>雅克</span></font><span>小心地打开了一个酒桶的盖子，里面浑浊的液体飘出混合了复杂成分的麦酒气味。不过，</span><font color=mediumpurple><span>雅克</span></font><span>还是欣然接起一捧陈酿，一饮而尽。怪异的酸苦与酒精融合的滋味让</span><font color=mediumpurple><span>雅克</span></font><span>大呼过瘾，而他的同伴们却对此不感兴趣，先行走出了酒吧。</span></p><p><font color=mediumpurple><span>雅克</span></font><span>借助猫头鹰对酒吧东边的灌木丛进行了搜索，没有发现之前遇到的枯灌木，于是众人便一路走到了南边的一栋门窗都被加固了的建筑旁。</span><font color=green><span>凯芙拉</span></font><span>推测这里可能有人居住，便敲了敲门。</span></p><p><span>一个长着长白胡子的憔悴老人打开了用钢条加固着的木门，警惕地问：“谁？”</span></p><p><font color=green><span>凯芙拉</span></font><span>柔和地说道：“我们是从凡达林来的冒险者们，听说这里有一位德鲁伊在调查雷树镇，请问您是里多斯吗？”</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>看到这位老人悄悄放下了摸法杖的手，“我就是里多斯。”老人回答。</span></p><p><font color=green><span>凯芙拉</span></font><span>接着说道：“里多斯先生，我们是奎琳的朋友，想向您询问……”里多斯伸手制止了</span><font color=green><span>凯芙拉</span></font><span>，探头望了望四周的环境，然后招呼四人和</span><font color=limegreen><span>噗噗</span></font><span>进房间：“等一下。我们进来再说。”</span></p><p><span>房间里面摆放着一些生活物品，靠墙扎着一个简易帐篷，窗户都被新钉的木板封住。大家围着帐篷旁、天花板破洞下一个熄灭了的篝火坐下。</span></p><p><span>里多斯说：“你们难道没有看到我在镇子入口竖的标识牌？这里非常危险，枯枝怪和僵尸在废墟里出没！”</span></p><p><font color=green><span>凯芙拉</span></font><span>回答：“我们确实看到了，不过我们沿路解决了遇到的怪物，对我们来说威胁不大。”</span></p><p><span>里多斯训斥道：“还好你们先遇到了我！你们看到北边山丘的那个塔楼了吗？”四人点点头，“有条绿龙正呆在那座塔楼里！它把这里当成它的巢穴了，我正在跟踪观察它！”里多斯大声警告冒险者们。</span></p><p><span>四人面面相觑，小声讨论起绿龙的事情。里多斯手指着</span><font color=red><span>帕瓦</span></font><span>说道：“那条龙就长着像这个龙裔一样的绿色鳞片。”</span></p><p><font color=green><span>凯芙拉</span></font><span>说：“谢谢你告诉我们。我们是想向您询问关于克拉摩城堡的位置，不知您是否知道？”</span></p><p><span>里多斯说：“作为一个</span><strong><span>翠绿闲庭</span></strong><span>的德鲁伊，我当然知道这帮地精所谓城堡的巢穴在哪。”他顿了顿：“我也可以告诉你们，不过我希望你们能够证明自己的实力。”</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>听说翠绿闲庭后，向里多斯表达了自己想要加入闲庭的意愿。里多斯说：“那正好，如果你和你的同伴们能够驱逐那条绿龙的话，就能证明你们的力量。作为回报，我也会告诉你们那座城堡的位置，并且为你推荐入庭。”四人当即同意了这项任务。“顺带一提”，里多斯补充道：“镇子东南角的房子里有几个穿着黑斗篷、戴着黑面具的人出没，你们最好也提防着点。”</span></p><p><span>里多斯将四人送出了营地，祝冒险者们好运后便转身返回屋内。</span><font color=mediumpurple><span>雅克</span></font><span>从里多斯营地对面的玫瑰花丛里摘下一株夹在耳上。四人带着</span><font color=limegreen><span>噗噗</span></font><span>，由</span><font color=green><span>凯芙拉</span></font><span>带头，向东边山丘脚底的十字路口前进。</span></p><p><span>来到路口时，</span><font color=green><span>凯芙拉</span></font><span>注意到路口地面上覆盖着一层白色的东西。蹲下一摸，</span><font color=green><span>凯芙拉</span></font><span>手上沾满了白色的粘稠丝线，她意识到这是一层蛛网。正当大家注意地面时，两只巨蜘蛛感受到了蛛网的异样，悄悄爬到了南边废墟墙上……</span></p><blockquote><h3><a name="战斗巨蜘蛛" class="md-header-anchor"></a><span>战斗：巨蜘蛛</span></h3><p><span>巨蜘蛛爬在墙的顶部，朝触动蛛网的</span><font color=green><span>凯芙拉</span></font><span>喷射出大量的蛛丝，</span><font color=green><span>凯芙拉</span></font><span>立即被紧紧裹住。另一只也试图向</span><font color=limegreen><span>噗噗</span></font><span>喷丝，却被它躲开了。</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>赶忙抽出弓箭射击蜘蛛。捆住</span><font color=green><span>凯芙拉</span></font><span>的巨蜘蛛下了墙，爬到她身边张开了带有尖锐牙齿的嘴，一口咬住</span><font color=green><span>凯芙拉</span></font><span>，注入了蜘蛛毒液，</span><font color=green><span>凯芙拉</span></font><span>当即麻痹昏迷过去。</span><font color=red><span>帕瓦</span></font><span>用巨斧砸向墙体，震下了一只巨蜘蛛，随后</span><font color=limegreen><span>噗噗</span></font><span>和</span><font color=deepskyblue><span>艾尔莎</span></font><span>将它杀死。咬昏</span><font color=green><span>凯芙拉</span></font><span>的巨蜘蛛退回到墙上，但被</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=red><span>帕瓦</span></font><span>射中，流出许多绿色的血液后从墙上掉下来死了。</span></p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>每人</span><font color=olivedrab><span>100EXP</span></font><span>，</span><font color=mediumpurple><span>雅克</span></font><font color=olivedrab><span>200EXP</span></font></p></blockquote><p><span>冒险者们在原地休息了一会，</span><font color=green><span>凯芙拉</span></font><span>渐渐恢复了意识，然后用圣武士的神圣能量恢复了自己的体力。</span></p><p><span>众人沿着蜿蜒的小路爬到了山丘顶端，塔楼连着一间小屋，整座建筑结构还算完整，但塔楼的屋顶已经塌了一半。靠近小屋，众人都闻到一股怪异的刺鼻气味，两只巨蜘蛛的尸体就躺在小屋的门口附近，它们的身体异常地膨胀着，不正常的褶皱和水泡布满了外表。</span></p><p><font color=red><span>帕瓦</span></font><span>作为队伍中唯一的龙裔，小心地上前敲了敲门，用龙语大声喊道：“尊贵的绿龙大人，我们有一事相谈，请问能否现身？”</span></p><p><span>然而，周围仍然是一片寂静。</span></p><p><font color=red><span>帕瓦</span></font><span>重新用更加洪亮的声音喊道：“绿龙大人！我们有一事相求！”</span></p><p><span>片刻，从屋内和塔楼底部传来地震般的轰隆声，整个房屋的墙体震动起来。从塔楼屋顶的缺口处，先是伸出了一只带着绿色鳞片的翅膀，然后一只龙爪重重地搭在了断墙上，几块石砖掉了下来。</span></p><p><span>众人抬头望向塔楼，一头巨大的绿龙从塔楼内探出了半个身子，用有着黄金色瞳孔的龙眼俯视着地上的冒险者们。绿龙低沉的龙语震动着大地：“是谁胆敢打扰我毒牙的美梦！”</span></p><p><font color=red><span>帕瓦</span></font><span>奋力爬上塔楼，站在一块凸起的平台上朝毒牙说道：“毒牙大人，很抱歉我们打扰了您的睡眠。”</span><font color=red><span>帕瓦</span></font><span>从兜里拿出一个镶着红宝石的金戒指，高举给毒牙：“一点见面礼，不成敬意！”</span></p><p><span>毒牙轻蔑的看了看</span><font color=red><span>帕瓦</span></font><span>手中的戒指，然后从牙缝里挤出些话：“哼，就这样的小戒指也配得上我毒牙？！”</span></p><p><font color=red><span>帕瓦</span></font><span>见毒牙不肯收下礼物，回头望向同伴们使眼色。</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>小声交流起来，考虑以巢穴环境太差为由劝说绿龙了离开。毒牙看着自说自话的冒险者们，想到自己的午睡被打扰，不耐烦地朝天空怒吼一声：“陌生人们！我毒牙可没有空陪你们聊天！如果你们再这样的话，我可不会对你们客气！”</span></p><p><font color=green><span>凯芙拉</span></font><span>见状，赶忙喊道：“毒牙大人，这里作为巢穴实在是太过屈尊了！您看，四周都是断垣残壁，并且还有各种怪物出没！”</span><font color=red><span>帕瓦</span></font><span>赶忙附和：“没错！这座塔楼屋顶也塌了，实在是配不上毒牙大人的威严啊！”</span></p><p><font color=green><span>凯芙拉</span></font><span>继续说：“毒牙大人，我们已经在三猪小径的附近找到了一个更适合你作为巢穴的洞窟！那里依山傍水，我们帮您清除了里面的哥布林，实在没有比那里更适合作为毒牙大人的巢穴了！”</span><font color=deepskyblue><span>艾尔莎</span></font><span>补充道：“在洞窟里还有巨大的瀑布，适合毒牙大人平常散心观赏！”</span></p><p><span>绿龙毒牙眯起眼睛思考了一会，说道：“哼……听起来不错……不过，我的财宝可没那么容易搬出去！我可不想在路上丢了几样宝贝！”</span></p><p><font color=green><span>凯芙拉</span></font><span>赶忙说道：“毒牙大人！这不是问题！我们可以为您找来一个半兽人作为你的力工，帮您搬运您的财物！”</span></p><p><span>毒牙昂起头哼了一声：“半兽人？那种野蛮的生物也配为我搬运财宝？”</span></p><p><span>四人听罢，随即渲染起</span><font color=salmon><span>Zed</span></font><span>的聪慧和英勇来。毒牙似乎被说服了：“哼……好吧。那你们赶紧把他找来！”</span></p><p><font color=green><span>凯芙拉</span></font><span>回到镇子入口的扎营处找到了</span><font color=salmon><span>Zed</span></font><span>，告诉他有一件“非常重要而关键的事”，必须要他来完成。</span><font color=salmon><span>Zed</span></font><span>半信半疑地跟着</span><font color=green><span>凯芙拉</span></font><span>来到了塔楼下，却被一条绿龙使唤着把塔楼里的宝藏都搬了出来。</span></p><p><span>毒牙朝</span><font color=salmon><span>Zed</span></font><span>说道：“半兽人，你最好别耍什么花招！也别把我的东西弄丢了！好好地给我搬到我的新巢穴来！”说罢，毒牙猛地一振翅膀，激起了一阵强风腾空而起，朝南方飞去。</span><font color=salmon><span>Zed</span></font><span>搬着装着毒牙财宝的沉重木箱，一边朝南前进一边与同伴们道了别。</span></p><p><span>四人回到了山丘脚下与巨蜘蛛交战的地方，继续向东前进。不一会，众人来到了一片宽阔的平坦广场上，中央竖着一个手持矛与盾的战士木雕像。</span><font color=deepskyblue><span>艾尔莎</span></font><span>认出，这是传说中在雷树镇建立初期，击败了许多无冬森林来袭怪物的古英雄帕里恩。</span></p><p><span>广场四周分布着一些建筑，除了北边的一座带着城垛的高耸建筑外，大部分都已经变成了废墟。</span><font color=mediumpurple><span>雅克</span></font><span>让魔宠靠近北边的建筑，透过窗户的木板缝隙，可以看出里面摆放着几张床铺，一些穿着腐坏士兵盔甲的尸体倒在房间里。</span><font color=green><span>凯芙拉</span></font><span>判断，这些尸体也一定是之前遇到的僵尸。她踢开了房门，冲进来拔出了斧枪准备击杀这些不死生物，同伴们也跟了进来。</span></p><blockquote><h3><a name="战斗哨兵营所" class="md-header-anchor"></a><span>战斗：哨兵营所</span></h3><p><span>众人踏进房门不一会，走廊尽头的两扇门传来被撞击的声音。随着轰隆的破门声，5具僵尸从房间里涌进走廊。</span><font color=green><span>凯芙拉</span></font><span>和</span><font color=red><span>帕瓦</span></font><span>冲上前挡住了僵尸们，</span><font color=limegreen><span>噗噗</span></font><span>也挤了进来用熊掌重击着地上缓慢爬行的僵尸们。在</span><font color=deepskyblue><span>艾尔莎</span></font><span>和</span><font color=mediumpurple><span>雅克</span></font><span>的弓箭掩护下，众人在喷涌出的火山灰中轻松解决了这些僵尸。</span></p><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>每人</span><font color=olivedrab><span>65EXP</span></font><span>，</span><font color=mediumpurple><span>雅克</span></font><font color=olivedrab><span>130EXP</span></font></p></blockquote><p><span>四人向南移动时，发现灌木丛中藏匿着6只枯枝怪，并轻松消灭了它们。最南边的完好房屋的门窗也被加固着，</span><font color=green><span>凯芙拉</span></font><span>试着敲了敲门，然而没有人回应。其余人向房屋的南方查看时，看见6个穿着黑色斗篷、带着黑面具的人朝房屋过来。</span></p><p><span>领头的人望见冒险者们，大声喊道：“你们是谁！”</span></p><p><font color=green><span>凯芙拉</span></font><span>回答道：“你们好！我们是路过的冒险者！”</span></p><p><span>领头的黑斗篷走近与</span><font color=green><span>凯芙拉</span></font><span>握了手，自称法乌里：“龙后在上，我们是龙巫教的教徒们，主要在附近调查龙类的生态和习性。最近这里的塔楼住下了一条绿龙，我们正在与它交流。”</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>在无冬城听说过这个教派，大家都称他们为“危险的邪教徒们”，信奉</span><em><span>邪龙之神</span></em><span>提亚马特的他们试图与任何邪恶的龙类结盟，达成他们危险而黑暗的目的。</span><font color=deepskyblue><span>艾尔莎</span></font><span>随口说道：“我们就是从塔楼过来的，已经见过那头绿龙了。”</span></p><p><span>法乌里紧张起来，问</span><font color=deepskyblue><span>艾尔莎</span></font><span>：“这么说，你们跟它说过话了？那它为什么朝南飞走了？”</span></p><p><font color=green><span>凯芙拉</span></font><span>回答道：“我们为它找了一个好巢穴，它也很中意，因此带着他的财宝搬迁了。”</span></p><p><font color=deepskyblue><span>艾尔莎</span></font><span>从法乌里的面具周围的面部肌肉的扭曲变形看出，法乌里的表情非常复杂。法乌里强压怒火，激动地说：“这么说！是你们让它离开的！”法乌里视线低了下去，小声说道：“好吧……”然后转过身，对着其余5个教徒们用龙语骂了一句，然后指挥他们跟他离开。</span></p><p><font color=green><span>凯芙拉</span></font><span>十分恼火地看着法乌里，然后说道：“你们既然离开了，这间房子我们就可以进去了吧？”</span></p><p><span>法乌里向南走着，头也不回地说：“当然，请便！”</span></p><p><span>然而，</span><font color=green><span>凯芙拉</span></font><span>发现房门锁着，打不开，便又朝法乌里喊道：“门怎么锁着！”</span></p><p><span>法乌里回头说道：“南门没锁！”</span></p><p><font color=green><span>凯芙拉</span></font><span>带着怒气与同伴们进了这群邪教徒的临时住所，里面除了地上简易的草席和一些桌椅，没有看到任何有价值的东西。</span></p><p><span>四人离开邪教徒住所，准备向西返回里多斯的营地。在路上，众人发现了一间商店废墟，里面的货架摆放着各种破损的玻璃容器，地上散落着陶器碎片、空试剂瓶和碎石。</span><font color=deepskyblue><span>艾尔莎</span></font><span>从货架底下的确发现了一处松动的地板，从下面找到了一个木盒，里面装着米尔娜所说的一条配着上好翡翠坠饰的金项链。</span></p><p><span>回到与巨蜘蛛战斗的废墟，众人在废墟里的墙上看到一具被蛛丝紧紧裹住挂着的男性精灵干瘪尸体。冒险者们把他放了下来，</span><font color=deepskyblue><span>艾尔莎</span></font><span>从他的腰包里翻出了一瓶治疗药水和</span><font color=goldenrod><span>23gp</span></font><span>、</span><font color=slategray><span>35sp</span></font><span>。</span></p><blockquote><h3><a name="清理战场总结" class="md-header-anchor"></a><span>清理战场总结</span></h3><p><em><span>经验奖励</span></em><span>：</span><font color=green><span>凯芙拉</span></font><span>、</span><font color=deepskyblue><span>艾尔莎</span></font><span>、</span><font color=red><span>帕瓦</span></font><span>每人</span><font color=olivedrab><span>190EXP</span></font><span>，</span><font color=mediumpurple><span>雅克</span></font><font color=olivedrab><span>380EXP</span></font></p></blockquote><p><span>回到里多斯的住所，</span><font color=green><span>凯芙拉</span></font><span>敲了敲门。里多斯略带惊讶地请冒险者们和</span><font color=limegreen><span>噗噗</span></font><span>进了营地。</span></p><p><span>围在篝火旁，四人向里多斯介绍了他们驱逐绿龙的过程，并且告诉里多斯他们将镇子里的怪物都清理了一遍，同时东南角的邪教徒们也离开了。里多斯嘴角露出难以察觉的一丝微笑，然后说道：“那么，既然你们已经证明了自己的实力，是时候兑现我的承诺了。”</span></p><p><span>里多斯在</span><font color=green><span>凯芙拉</span></font><span>展开的地图上，用羽毛笔标出了克拉摩城堡的位置——于凡达林向北25里的无冬森林内。随后，里多斯从包中找出了羊皮纸，为</span><font color=deepskyblue><span>艾尔莎</span></font><span>写起了推荐信。</span></p><p><span>里多斯将信交给</span><font color=deepskyblue><span>艾尔莎</span></font><span>，对她说道：“游侠，拿着它去找无冬城的翠绿闲庭上级，你就会成为闲庭的一份子——一个</span><em><span>春之守护者Springwarden</span></em><span>。”收下信和地图，冒险者们感谢了里多斯的帮助。</span></p><blockquote><h3><a name="里程碑赶走绿龙毒牙" class="md-header-anchor"></a><span>里程碑：赶走绿龙毒牙</span></h3><p><em><span>经验奖励</span></em><span>：每人</span><font color=olivedrab><span>580EXP</span></font></p></blockquote></div>
+</body>
+</html>
